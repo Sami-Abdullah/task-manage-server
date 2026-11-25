@@ -6,11 +6,6 @@ const ticketSchema = new mongoose.Schema({
   description: { type: String, required: true },
   priority: { type: String, enum: ["low", "medium", "high", "urgent"], default: "medium" },
   status: { type: String, enum: ["open", "in_progress", "resolved", "closed"], default: "open" },
-  raisedBy: {
-    name: String,
-    email: String,
-    phone: String,
-  },
   operatorId: { type: String, required: true, index: true },
   operatorName: { type: String, required: true },
 }, { timestamps: true });

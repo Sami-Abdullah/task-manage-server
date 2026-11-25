@@ -63,7 +63,6 @@ app.post("/api/tickets", async (req, res) => {
     subject: req.body.subject,
     description: req.body.description,
     priority: req.body.priority,
-    raisedBy: req.body.raisedBy,
     operatorId: user.id,
     operatorName: user.name,
   });
