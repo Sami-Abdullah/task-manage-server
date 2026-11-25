@@ -13,7 +13,7 @@ app.use(cors({ origin: process.env.FRONTEND_ORIGIN, credentials: true }));
 
 // Better Auth handles everything under /api/auth/*
 // MUST BE BEFORE express.json()
-app.all("/api/auth/*splat", toNodeHandler(auth)); // Note: *splat for Express 5. (If you are on Express 4, change back to "/api/auth/*")
+app.all("/api/auth/*", toNodeHandler(auth)); // Note: *splat for Express 5. (If you are on Express 4, change back to "/api/auth/*")
 
 app.use(express.json());
 
